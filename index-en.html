@@ -53,7 +53,6 @@
       background-color: #111;
       padding: 0.75rem 1rem;
       text-align: center;
-      flex-wrap: wrap;
     }
     nav a {
       color: #facc15;
@@ -86,34 +85,188 @@
       border-radius: 0.5rem;
       text-decoration: none;
     }
+    .portrait {
+      text-align: center;
+      margin: 3rem auto 2rem;
+    }
+    .portrait img {
+      width: 100%;
+      max-width: 520px;
+      border-radius: 1rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    }
     footer {
       text-align: center;
       padding: 2rem 1rem;
       font-size: 0.875rem;
       color: #999;
     }
+    footer a {
+      color: #999;
+      text-decoration: none;
+      margin: 0 0.5rem;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.75rem; }
+      header p { font-size: 1rem; }
+      nav a { margin: 0.25rem 0.5rem; }
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: none;
+    }
+    .cta-button:hover,
+    .anfrage-button:hover {
+      background: #eab308;
+      transform: scale(1.03);
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+    .portrait img {
+      opacity: 0;
+      transform: scale(0.95);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .portrait img.visible {
+      opacity: 1;
+      transform: scale(1);
+    }
+    #scrollToTopBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #facc15;
+      color: #0e0e0e;
+      font-weight: 600;
+      padding: 0.6rem 1.2rem;
+      border-radius: 9999px;
+      font-size: 1.5rem;
+      text-decoration: none;
+      z-index: 999;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      display: none;
+      transition: transform 0.2s ease;
+    }
+    #scrollToTopBtn:hover {
+      background-color: #eab308;
+      transform: scale(1.1);
+    }
+    html {
+      scroll-behavior: smooth;
+    }
   </style>
 </head>
 <body>
+  <a id="top"></a>
+
   <header>
-    <img src="assets/images/header.jpg" alt="Bernhard Frank Gear Collage" />
-    <h1>Mixing and Mastering with over 30 Years of Experience</h1>
-    <p>I'm Bernhard Frank. For more than 30 years I've helped music productions sound better – in the studio, live and for TV. Now I'm here for your project.</p>
-    <a class="cta-button" href="mailto:b.hard@mac.com">Get in touch</a>
+    <img src="assets/images/header.jpg" alt="Bernhard Frank Studio Collage">
+    <h1>Mixing and Mastering with 30+ Years of Experience</h1>
+    <p>I'm Bernhard Frank. I've been enhancing music productions for over 30 years – in the studio, live on stage, and for TV productions.<br>Now I'm here for your project.</p>
+    <a class="cta-button" href="mailto:b.hard@mac.com">Get in Touch</a>
   </header>
 
+  <div class="portrait fade-in">
+    <img src="assets/images/bernhard.jpg" alt="Bernhard Frank Portrait">
+  </div>
+
   <nav>
-    <a href="imprint.html">Imprint</a>
-    <a href="privacy.html">Privacy</a>
+    <a href="#mastering">Mastering</a>
+    <a href="#mixing">Mixing</a>
+    <a href="#recording">Location Recording</a>
+    <a href="#live">Live Sound</a>
+    <a href="#akustik">Acoustic Consulting</a>
+    <a href="#workshops">Workshops</a>
   </nav>
 
-  <section>
-    <h2>Welcome</h2>
-    <p>This is the English version of the site. If you’re looking for mixing, mastering, or acoustic advice – feel free to reach out. International inquiries welcome.</p>
+  <section id="mastering" class="fade-in">
+    <h2>Mastering</h2>
+    <p>Mastering is more than just making it louder.</p>
+    <p>It’s experience, sensitivity and taste – combined with deep technical knowledge for today’s requirements.</p>
+    <p>Analog/Digital hybrid mastering with hand-picked tools. Tailored exactly to your needs.</p>
+    <p>TV, radio, Spotify, iTunes, YouTube, vinyl.</p>
+    <p><strong>Per track: €99<br>From 3 tracks: €89 each<br>Full album (more than 5 tracks): on request<br>Platform-specific versions (Spotify, etc.): +€10</strong></p>
+    <p>All prices incl. VAT</p>
+    <a class="anfrage-button" href="mailto:b.hard@mac.com">Get in Touch</a>
+  </section>
+
+  <section id="mixing" class="fade-in">
+    <h2>Mixing</h2>
+    <p>I’ve been producing, mixing and mastering all styles of music for over 30 years.</p>
+    <p>I’ve mixed and mastered music for over 200 TV shows.</p>
+    <p>My mixes already include mastering – no extra charge. You’ll receive a ready-to-release product.</p>
+    <p><strong>Up to 24 tracks: €299 per track<br>More than 24 tracks: €349 per track</strong></p>
+    <p>All prices incl. VAT</p>
+    <a class="anfrage-button" href="mailto:b.hard@mac.com">Get in Touch</a>
+  </section>
+
+  <section id="recording" class="fade-in">
+    <h2>Location Recording</h2>
+    <p>High-end mobile recordings for orchestras, choirs, and bands.</p>
+    <p>Up to 40 channels<br>Premium preamps and converters (Metric Halo)<br>A selection of top microphones<br>Cables, stands, headphones…</p>
+    <p>No stress – I bring everything needed for your project.</p>
+    <a class="anfrage-button" href="mailto:b.hard@mac.com">Get in Touch</a>
+  </section>
+
+  <section id="live" class="fade-in">
+    <h2>Live Sound</h2>
+    <p>I’ve supported countless bands live – tours across Europe and North America.</p>
+    <p>You want to sound exactly how you imagined? I’ll make sure it happens.</p>
+    <p>Upon request, I’ll bring my own mics and outboard gear.</p>
+    <p><strong>Day rate (10 hours): €699</strong></p>
+    <a class="anfrage-button" href="mailto:b.hard@mac.com">Get in Touch</a>
+  </section>
+
+  <section id="akustik" class="fade-in">
+    <h2>Acoustic Consulting</h2>
+    <p>Your rehearsal room, studio, or office – any space where sound matters.</p>
+    <p>...and the egg cartons didn’t really help?</p>
+    <p>I’ve designed, built and operated multiple studios.</p>
+    <p>I know what’s possible – even on a tight budget.</p>
+    <p>Avoid the mistakes I’ve made over 30 years.</p>
+    <a class="anfrage-button" href="mailto:b.hard@mac.com">Get in Touch</a>
+  </section>
+
+  <section id="workshops" class="fade-in">
+    <h2>Workshops / Coaching</h2>
+    <p>For teachers and students at music schools.</p>
+    <p>For managers who want to feel more confident using a microphone.</p>
+    <p>For event technicians eager to learn more.</p>
+    <a class="anfrage-button" href="mailto:b.hard@mac.com">Get in Touch</a>
   </section>
 
   <footer>
-    &copy; 2025 Bernhard Frank – klangmeister.eu
+    &copy; 2025 Bernhard Frank – klangmeister.eu<br>
+    <a href="impressum-en.html">Legal Notice</a> | <a href="privacy.html">Privacy</a> | <a href="index.html">Deutsch</a>
   </footer>
+
+  <a id="scrollToTopBtn" href="#top" title="Back to top">↑</a>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in, .portrait img').forEach(el => {
+      observer.observe(el);
+    });
+
+    window.onscroll = function() {
+      const btn = document.getElementById("scrollToTopBtn");
+      btn.style.display = (document.documentElement.scrollTop > 200) ? "block" : "none";
+    };
+  </script>
 </body>
 </html>
