@@ -110,15 +110,9 @@
       text-decoration: underline;
     }
     @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.75rem;
-      }
-      header p {
-        font-size: 1rem;
-      }
-      nav a {
-        margin: 0.25rem 0.5rem;
-      }
+      header h1 { font-size: 1.75rem; }
+      header p { font-size: 1rem; }
+      nav a { margin: 0.25rem 0.5rem; }
     }
     .fade-in {
       opacity: 0;
@@ -194,12 +188,64 @@
     <a href="#datenschutz">Datenschutz</a>
   </nav>
 
-  <!-- Hier folgen alle deine Sektionen wie gehabt -->
+  <section id="mastering" class="fade-in">
+    <h2>Mastering</h2>
+    <p>Mastering ist nicht einfach nur lauter.</p>
+    <p>Mastering ist Erfahrung, Einfühlungsvermögen und Geschmack mit dem technischen Verständnis für die Anforderungen von heute.</p>
+    <p>Analog/Digital Hybrid Mastering mit ausgesuchtesten Tools.<br>Perfekt abgestimmt auf deine Anforderungen.</p>
+    <p>TV, Radio, Spotify, iTunes, YouTube, Vinyl</p>
+    <p><strong>Master pro Track: 90 €<br>Ab 3 Tracks: 80 € p.T.<br>Spezielle Anpassung für die diversen Dienste (Spotify usw.): je 10 €</strong></p>
+    <a class="anfrage-button" href="mailto:b.hard@mac.com">Jetzt anfragen</a>
+  </section>
+
+  <section id="mixing" class="fade-in">
+    <h2>Mixing</h2>
+    <p>Ich produziere, mische und mastere alle Genres seit über 30 Jahren.</p>
+    <p>Ich habe Musik für über 200 Fernsehsendungen gemischt und gemastert.</p>
+    <p>Bei meinen Mixen ist das Mastering bereits inkludiert. Du bekommst ein fertiges Produkt ohne weitere Kosten.</p>
+    <p><strong>bis 24 Spuren: 250 € p.T.<br>ab 24 Spuren: 300 € p.T.</strong></p>
+    <a class="anfrage-button" href="mailto:b.hard@mac.com">Jetzt anfragen</a>
+  </section>
+
+  <section id="recording" class="fade-in">
+    <h2>Location-Recording</h2>
+    <p>Ich biete High-End Aufnahmen vor Ort.<br>Orchester, Chöre, Bands.</p>
+    <p>Bis 40 Kanäle<br>hochwertigste Preamps und Wandler von Metric Halo<br>eine Auswahl bester Mikrofone<br>Kabel, Stative, Kopfhörer…</p>
+    <p>Kein Stress – ich bringe für jedes Projekt alles benötigte mit.</p>
+    <a class="anfrage-button" href="mailto:b.hard@mac.com">Jetzt anfragen</a>
+  </section>
+
+  <section id="live" class="fade-in">
+    <h2>Live Sound</h2>
+    <p>Ich habe unzählige Bands live betreuen dürfen – Tourneen in ganz Europa und Nordamerika.</p>
+    <p>Ihr wollt sicher sein, dass ihr klingt wie es gedacht war?<br>Jemand, der das Beste herausholt?</p>
+    <p>Bei Bedarf bringe ich eigene Mikrofone und Outboard mit.</p>
+    <p><strong>Live Mix Tagessatz à 10 Std.: 600 €</strong></p>
+    <a class="anfrage-button" href="mailto:b.hard@mac.com">Jetzt anfragen</a>
+  </section>
+
+  <section id="akustik" class="fade-in">
+    <h2>Beratung / Akustik</h2>
+    <p>Euer Proberaum, dein Projektstudio, ihr Büro…<br>überall wo Klang eine Rolle spielt.</p>
+    <p>…es klingt nicht und die Eierkartons haben’s irgendwie nicht gebracht?</p>
+    <p>Ich habe diverse Studios geplant, gebaut und betrieben.</p>
+    <p>Ich weiß, was möglich ist – ohne den Geldbeutel zu sprengen.</p>
+    <p>Vermeide die Fehler, die ich in 30 Jahren gemacht habe.</p>
+    <a class="anfrage-button" href="mailto:b.hard@mac.com">Jetzt anfragen</a>
+  </section>
+
+  <section id="workshops" class="fade-in">
+    <h2>Workshops / Coaching</h2>
+    <p>Ich biete Workshops für Lehrer und Schüler an Musikschulen.</p>
+    <p>Manager, die häufig mit Mikrofon sprechen müssen und im Umgang damit furchtloser werden wollen.</p>
+    <p>Für Veranstaltungstechniker, die dazulernen wollen.</p>
+    <a class="anfrage-button" href="mailto:b.hard@mac.com">Jetzt anfragen</a>
+  </section>
 
   <section id="impressum" class="fade-in">
     <h2>Impressum</h2>
     <p>Angaben gemäß § 5 TMG:</p>
-    <p>Bernhard Frank<br>Musterstraße 1<br>12345 Musterstadt<br>Telefon: 0123 456789<br>E-Mail: b.hard@mac.com</p>
+    <p>Bernhard Frank<br>Adresse<br>E-Mail: <a href="mailto:b.hard@mac.com">b.hard@mac.com</a></p>
   </section>
 
   <section id="datenschutz" class="fade-in">
@@ -230,11 +276,7 @@
 
     window.onscroll = function() {
       const btn = document.getElementById("scrollToTopBtn");
-      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-        btn.style.display = "block";
-      } else {
-        btn.style.display = "none";
-      }
+      btn.style.display = (document.documentElement.scrollTop > 200) ? "block" : "none";
     };
   </script>
 </body>
