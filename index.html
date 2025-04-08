@@ -1,58 +1,243 @@
-<a id="top"></a>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bernhard Frank – klangmeister.eu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      background-color: #0e0e0e;
+      color: #f5f5f5;
+    }
+    header {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 4rem 1.5rem 3rem;
+      background: linear-gradient(to bottom, #1a1a1a, #0e0e0e);
+      text-align: center;
+    }
+    header img {
+      width: 100%;
+      max-width: 1000px;
+      border-radius: 1rem;
+      margin-bottom: 2rem;
+    }
+    header h1 {
+      font-size: 2.25rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    header p {
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+    .cta-button {
+      background: #facc15;
+      color: #0e0e0e;
+      font-weight: 600;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 9999px;
+      cursor: pointer;
+      font-size: 1rem;
+      text-decoration: none;
+    }
+    nav {
+      background-color: #111;
+      padding: 0.75rem 1rem;
+      text-align: center;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: #facc15;
+      margin: 0.5rem 0.75rem;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-block;
+    }
+    section {
+      padding: 3rem 1.5rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    section h2 {
+      color: #facc15;
+      margin-bottom: 1rem;
+      font-size: 1.75rem;
+    }
+    section p {
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+    .anfrage-button {
+      display: inline-block;
+      margin-top: 1.5rem;
+      background: #facc15;
+      color: #0e0e0e;
+      font-weight: 600;
+      padding: 0.6rem 1.5rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+    }
+    .portrait {
+      text-align: center;
+      margin: 3rem auto 2rem;
+    }
+    .portrait img {
+      width: 100%;
+      max-width: 520px;
+      border-radius: 1rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.875rem;
+      color: #999;
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.75rem;
+      }
+      header p {
+        font-size: 1rem;
+      }
+      nav a {
+        margin: 0.25rem 0.5rem;
+      }
+    }
+      .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: none;
+    }
 
-<h2 id="mastering">Mastering</h2>
-<p>Mastering ist nicht einfach nur lauter.</p>
-<p>Mastering ist Erfahrung, Einfühlungsvermögen und Geschmack mit dem technischen Verständnis für die Anforderungen von heute.</p>
-<p>Analog/Digital Hybrid Mastering mit ausgesuchtesten Tools. Perfekt abgestimmt auf deine Anforderungen.</p>
-<p>TV, Radio, Spotify, iTunes, YouTube, Vinyl</p>
-<ul>
-  <li>Master pro Track: 90 €</li>
-  <li>Ab 3 Tracks: 80 € p.T.</li>
-  <li>Spezielle Anpassung für Spotify etc.: je 10 €</li>
-</ul>
-<p><a href="#kontakt">Jetzt anfragen</a></p>
-<p style="text-align:right; margin-top: 1rem;"><a href="#top">↑ Zurück nach oben</a></p>
+    .cta-button:hover,
+    .anfrage-button:hover {
+      background: #eab308;
+      transform: scale(1.03);
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
 
-<h2 id="mixing">Mixing</h2>
-<p>Ich produziere, mische und mastere alle Genres seit über 30 Jahren.</p>
-<p>Ich habe Musik für über 200 Fernsehsendungen gemischt und gemastert.</p>
-<p>Bei meinen Mixen ist das Mastering bereits inkludiert. Du bekommst ein fertiges Produkt ohne weitere Kosten.</p>
-<ul>
-  <li>bis 24 Spuren: 250 €</li>
-  <li>ab 24 Spuren: 300 €</li>
-</ul>
-<p><a href="#kontakt">Jetzt anfragen</a></p>
-<p style="text-align:right; margin-top: 1rem;"><a href="#top">↑ Zurück nach oben</a></p>
+    .portrait img {
+      opacity: 0;
+      transform: scale(0.95);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .portrait img.visible {
+      opacity: 1;
+      transform: scale(1);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="assets/images/header.jpg" alt="Bernhard Frank Gerätecollage">
+    <h1>Mixing und Mastering mit über 30 Jahren Erfahrung</h1>
+    <p>Ich bin Bernhard Frank. Seit über 30 Jahren mache ich Musikproduktionen besser – im Studio, live und für TV-Produktionen.<br>Jetzt bin ich für dein Projekt da.</p>
+    <a class="cta-button" href="mailto:b.hard@mac.com">Jetzt anfragen</a>
+</header>
+<div class="portrait fade-in">
+    <img src="assets/images/bernhard.jpg" alt="Bernhard Frank Portrait">
+</div>
 
-<h2 id="recording">Location-Recording</h2>
-<p>Ich biete High-End Aufnahmen vor Ort. Orchester, Chöre, Bands.</p>
-<p>Bis 40 Kanäle, hochwertigste Preamps und Wandler von Metric Halo, beste Mikrofone, Kabel, Stative, Kopfhörer…</p>
-<p>Kein Stress – ich bringe für jedes Projekt alles benötigte mit.</p>
-<p><a href="#kontakt">Jetzt anfragen</a></p>
-<p style="text-align:right; margin-top: 1rem;"><a href="#top">↑ Zurück nach oben</a></p>
+  <nav>
+    <a href="#mastering">Mastering</a>
+    <a href="#mixing">Mixing</a>
+    <a href="#recording">Location-Recording</a>
+    <a href="#live">Live Sound</a>
+    <a href="#akustik">Akustik</a>
+    <a href="#workshops">Workshops</a>
+  </nav>
 
-<h2 id="live">Live Sound</h2>
-<p>Ich habe unzählige Bands live betreuen dürfen – Tourneen in ganz Europa und Nordamerika.</p>
-<p>Ihr wollt sicher sein, dass ihr klingt wie es gedacht war? Jemand, der das Beste herausholt?</p>
-<p>Bei Bedarf bringe ich eigene Mikrofone und Outboard mit.</p>
-<ul>
-  <li>Live Mix Tagessatz à 10 Std.: 600 €</li>
-</ul>
-<p><a href="#kontakt">Jetzt anfragen</a></p>
-<p style="text-align:right; margin-top: 1rem;"><a href="#top">↑ Zurück nach oben</a></p>
+  <section id="mastering" class="fade-in">
+    <h2>Mastering</h2>
+    <p>Mastering ist nicht einfach nur lauter.</p>
+    <p>Mastering ist Erfahrung, Einfühlungsvermögen und Geschmack mit dem technischen Verständnis für die Anforderungen von heute.</p>
+    <p>Analog/Digital Hybrid Mastering mit ausgesuchtesten Tools.<br>Perfekt abgestimmt auf deine Anforderungen.</p>
+    <p>TV, Radio, Spotify, iTunes, YouTube, Vinyl</p>
+    <p><strong>Master pro Track: 90 €<br>Ab 3 Tracks: 80 € p.T.<br>Spezielle Anpassung für die diversen Dienste (Spotify usw.): je 10 €</strong></p>
+    <a class="anfrage-button" href="mailto:b.hard@mac.com">Jetzt anfragen</a>
+  </section>
 
-<h2 id="akustik">Akustikberatung</h2>
-<p>Proberaum, Projektstudio, Büro… überall wo Klang eine Rolle spielt.</p>
-<p>Es klingt nicht und die Eierkartons haben’s nicht gebracht?</p>
-<p>Ich habe diverse Studios geplant, gebaut und betrieben.</p>
-<p>Ich weiß, was möglich ist – ohne den Geldbeutel zu sprengen.</p>
-<p>Vermeide die Fehler, die ich in 30 Jahren gemacht habe.</p>
-<p><a href="#kontakt">Jetzt anfragen</a></p>
-<p style="text-align:right; margin-top: 1rem;"><a href="#top">↑ Zurück nach oben</a></p>
+  <section id="mixing" class="fade-in">
+    <h2>Mixing</h2>
+    <p>Ich produziere, mische und mastere alle Genres seit über 30 Jahren.</p>
+    <p>Ich habe Musik für über 200 Fernsehsendungen gemischt und gemastert.</p>
+    <p>Bei meinen Mixen ist das Mastering bereits inkludiert. Du bekommst ein fertiges Produkt ohne weitere Kosten.</p>
+    <p><strong>bis 24 Spuren: 250 € p.T.<br>ab 24 Spuren: 300 € p.T.</strong></p>
+    <a class="anfrage-button" href="mailto:b.hard@mac.com">Jetzt anfragen</a>
+  </section>
 
-<h2 id="workshops">Workshops & Coaching</h2>
-<p>Ich biete Workshops für Lehrer und Schüler an Musikschulen.</p>
-<p>Manager, die häufig mit Mikrofon sprechen müssen und im Umgang damit furchtloser werden wollen.</p>
-<p>Für Veranstaltungstechniker, die dazulernen wollen.</p>
-<p><a href="#kontakt">Jetzt anfragen</a></p>
-<p style="text-align:right; margin-top: 1rem;"><a href="#top">↑ Zurück nach oben</a></p>
+  <section id="recording" class="fade-in">
+    <h2>Location-Recording</h2>
+    <p>Ich biete High-End Aufnahmen vor Ort.<br>Orchester, Chöre, Bands.</p>
+    <p>Bis 40 Kanäle<br>hochwertigste Preamps und Wandler von Metric Halo<br>eine Auswahl bester Mikrofone<br>Kabel, Stative, Kopfhörer…</p>
+    <p>Kein Stress – ich bringe für jedes Projekt alles benötigte mit.</p>
+    <a class="anfrage-button" href="mailto:b.hard@mac.com">Jetzt anfragen</a>
+  </section>
+
+  <section id="live" class="fade-in">
+    <h2>Live Sound</h2>
+    <p>Ich habe unzählige Bands live betreuen dürfen – Tourneen in ganz Europa und Nordamerika.</p>
+    <p>Ihr wollt sicher sein, dass ihr klingt wie es gedacht war?<br>Jemand, der das Beste herausholt?</p>
+    <p>Bei Bedarf bringe ich eigene Mikrofone und Outboard mit.</p>
+    <p><strong>Live Mix Tagessatz à 10 Std.: 600 €</strong></p>
+    <a class="anfrage-button" href="mailto:b.hard@mac.com">Jetzt anfragen</a>
+  </section>
+
+  <section id="akustik" class="fade-in">
+    <h2>Beratung / Akustik</h2>
+    <p>Euer Proberaum, dein Projektstudio, ihr Büro…<br>überall wo Klang eine Rolle spielt.</p>
+    <p>…es klingt nicht und die Eierkartons haben’s irgendwie nicht gebracht?</p>
+    <p>Ich habe diverse Studios geplant, gebaut und betrieben.</p>
+    <p>Ich weiß, was möglich ist – ohne den Geldbeutel zu sprengen.</p>
+    <p>Vermeide die Fehler, die ich in 30 Jahren gemacht habe.</p>
+    <a class="anfrage-button" href="mailto:b.hard@mac.com">Jetzt anfragen</a>
+  </section>
+
+  <section id="workshops" class="fade-in">
+    <h2>Workshops / Coaching</h2>
+    <p>Ich biete Workshops für Lehrer und Schüler an Musikschulen.</p>
+    <p>Manager, die häufig mit Mikrofon sprechen müssen und im Umgang damit furchtloser werden wollen.</p>
+    <p>Für Veranstaltungstechniker, die dazulernen wollen.</p>
+    <a class="anfrage-button" href="mailto:b.hard@mac.com">Jetzt anfragen</a>
+  </section>
+
+  <footer>
+    &copy; 2025 Bernhard Frank – klangmeister.eu
+  </footer>
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in, .portrait img').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
