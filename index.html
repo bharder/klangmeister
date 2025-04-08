@@ -7,6 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
     body {
+      <a id="top"></a>
       font-family: 'Inter', sans-serif;
       margin: 0;
       background-color: #0e0e0e;
@@ -141,6 +142,47 @@
     }
   </style>
 </head>
+  <a id="scrollToTopBtn" href="#top" title="Zurück nach oben">↑</a>
+
+<style>
+  #scrollToTopBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #facc15;
+    color: #0e0e0e;
+    font-weight: 600;
+    padding: 0.6rem 1.2rem;
+    border-radius: 9999px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    z-index: 999;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    display: none;
+    transition: transform 0.2s ease;
+  }
+
+  #scrollToTopBtn:hover {
+    background-color: #eab308;
+    transform: scale(1.1);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+</style>
+
+<script>
+  // Button ein-/ausblenden beim Scrollen
+  window.onscroll = function() {
+    const btn = document.getElementById("scrollToTopBtn");
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+      btn.style.display = "block";
+    } else {
+      btn.style.display = "none";
+    }
+  };
+</script>
 <body>
   <header>
     <img src="assets/images/header.jpg" alt="Bernhard Frank Gerätecollage">
